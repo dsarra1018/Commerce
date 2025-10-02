@@ -6,8 +6,13 @@ from django.urls import reverse
 
 from .models import User
 
-
+# index - diplays login page or active listings
 def index(request):
+    # if user is not logged in display login page
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect(reverse("login"))
+    
+    # otherwise display active listings
     return render(request, "auctions/index.html")
 
 
