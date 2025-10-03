@@ -23,4 +23,7 @@ class Comment(models.Model):
 
 # Category model
 class Category(models.Model):
-    pass
+    category = models.CharField(max_length=50)
+
+    def __str__(self):
+        return f"{self.category}"
