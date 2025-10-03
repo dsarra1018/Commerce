@@ -6,21 +6,6 @@ class User(AbstractUser):
     pass
 
 
-# Listing model
-class Listing(models.Model):
-    pass
-
-
-# Bid model
-class Bid(models.Model):
-    pass
-
-
-# Comment model
-class Comment(models.Model):
-    pass
-
-
 # Category model
 class Category(models.Model):
     category = models.CharField(max_length=50)
